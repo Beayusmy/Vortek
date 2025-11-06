@@ -1,0 +1,12 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: normal; 
+}
+
+body{
+     background-color: #d9d9d9;
+}

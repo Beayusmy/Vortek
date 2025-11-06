@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to right, #000d80, #ff6600); /* azul → laranja */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.logo-section img {
+  height: 170px;
+}
+
+.logo-section span {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.icons-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+ 
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.8); /* laranja suave */
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #fff;
+}

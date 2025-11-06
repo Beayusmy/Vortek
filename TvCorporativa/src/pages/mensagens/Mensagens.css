@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, #000d80, #ff6600); /* azul → laranja */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .logo-section img {
+  height: 35px;
+} */
+
+.logo-section span {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
