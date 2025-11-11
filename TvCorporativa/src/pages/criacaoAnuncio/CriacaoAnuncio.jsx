@@ -34,6 +34,7 @@ const CriacaoAnuncio = () => {
     <main className="main_criacaoanuncio">
       <h4>ESCOLHER ARQUIVO</h4>
 
+    
       <form className="form-container" onSubmit={handleSubmit}>
         <input
           type="text"

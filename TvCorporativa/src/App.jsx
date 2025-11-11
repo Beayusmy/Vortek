@@ -7,13 +7,17 @@ import Configuracao from './pages/configuracao/configuracoes'
 import CursosPassando from './pages/CursosPassando/cursos'
 import Login from './pages/login/Login'
 import CriacaoAnuncio from './pages/criacaoAnuncio/criacaoAnuncio'
+import Visualizador from './pages/visualizador/Visualizador'
+import EditarTvs from "./pages/EditarTvs/Editar";
+
+
 
 
 function App() {
 
   return (
     <>
-      <Login/>
+      {/* <Login/> */}
       {/* <Cadastro/> */}
       {/* <Menu/>  */}
       {/* <CriacaoAnuncio/> */}
@@ -21,7 +25,8 @@ function App() {
       {/* <Configuracao/> */}
       {/* <CursosPassando/> */}
       {/* <Mensagem/> */}
-    
+      {/* <Visualizador/> */}
+      <EditarTvs/>
     </>
   )
 }

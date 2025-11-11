@@ -1,0 +1,126 @@
+.editarTvs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #d9d9d9;
+}
+
+/* -------- MAIN -------- */
+.editarTvs-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+}
+
+/* Conteúdo lado a lado */
+.conteudo-lado-a-lado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* espaço entre o card grande e os pequenos */
+}
+
+/* Card principal (imagem grande à esquerda) */
+.card-principal {
+  width: 350px;
+  height: 350px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-principal {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Grid de cards menores à direita */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 156px);
+  grid-template-rows: repeat(2, 156px);
+  gap: 20px;
+}
+
+.card-tvs {
+  width: 150px;
+  height: 150px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Imagem dentro de cada card */
+.card-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* -------- ÍCONES -------- */
+.icones-sobrepostos {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  display: flex;
+  gap: 6px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.icone {
+  color: white;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-size: 14px;
+}
+
+.icone:hover {
+  transform: scale(1.1);
+}
+
+/* -------- FOOTER LIMPO -------- */
+.footer-vortek {
+  width: 100%;
+  display: flex;
+  justify-content: right; /* centraliza logo + seta */
+  align-items: center;
+  padding: 20px 0;
+  background: transparent;
+  margin-top: auto;
+  gap: 20x; /* distância entre seta e logo */
+}
+
+/* Ícone de voltar (seta) */
+.footer-vortek .voltar {
+  width: 73px;
+  height: 73px;
+  cursor: pointer;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  transition: transform 0.2s ease;
+}
+
+.footer-vortek .voltar:hover {
+  transform: scale(1.05);
+}
+
+/* Logo Vortek */
+.footer-vortek .logo-vortek {
+  width:309px;
+  height: auto;
+  object-fit: contain;
+}
+               

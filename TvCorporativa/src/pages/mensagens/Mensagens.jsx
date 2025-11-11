@@ -1,24 +1,38 @@
 import React from "react";
-import "./mensagens.css";
-import logo from "../../assets/img/logo_grupo.png"; // caminho da sua logo
-import { FaRegFileAlt, FaEye, FaPlus, FaSignOutAlt } from "react-icons/fa";
+import "./Mensagens.css";
+import Header from "../../components/header/Header";
 
-const Header = () => {
+export default function MensagemForm() {
   return (
-    <header className="header">
-      <div className="logo-section">
-        <img src={logo} alt="Logo Vortek" />
-        <span>VORTEK</span>
-      </div>
+    <>
+    <Header/>
+    <div className="mensagem-form">
+      <form className="form-box">
+        <label>TITULO:</label>
+        <input type="text" />
 
-      <div className="icons-section">
-        <FaRegFileAlt className="icon" />
-        <FaEye className="icon" />
-        <FaPlus className="icon" />
-        <FaSignOutAlt className="icon" />
-      </div>
-    </header>
+        <label>MENSAGEM:</label>
+        <input type="text" />
+
+        <label>CATEGORIA:</label>
+        <input type="text" />
+
+        <label>DATA PARA COMEÇAR A EXIBIR:</label>
+        <input type="date" />
+
+        <label>DATA DE PARAR DE EXIBIR:</label>
+        <input type="date" />
+
+        <div className="buttons">
+          <button type="button" className="cancel">
+            CANCELAR
+          </button>
+          <button type="submit" className="confirm">
+            CONFIRMAR
+          </button>
+        </div>
+      </form>
+    </div>
+    </>
   );
-};
-
-export default Header;
+}

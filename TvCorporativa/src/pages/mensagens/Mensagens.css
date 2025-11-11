@@ -1,27 +1,72 @@
-.header {
+.mensagem-form {
   width: 100%;
-  height: 60px;
-  background: linear-gradient(to right, #000d80, #ff6600); /* azul → laranja */
+  min-height: 100vh;
+  background: #e6e6e6;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
 }
 
-.logo-section {
+.form-box {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  width: 420px;
+  padding: 10px;
 }
 
-/* .logo-section img {
-  height: 35px;
-} */
-
-.logo-section span {
-  color: #ff6600;
+.form-box label {
   font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 1px;
+  color: #d15f0d;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.form-box input {
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  padding: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+}
+
+.buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 140px;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel {
+  background: #0f3c74;
+}
+
+.confirm {
+  background: #0f3c74;
+}
+
+.cancel:hover,
+.confirm:hover {
+  opacity: 0.8;
+}
+
+/* ✅ ADICIONE AQUI */
+html, body {
+  overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;   /* ✅ impede QUALQUER rolagem */
 }

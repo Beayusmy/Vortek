@@ -36,6 +36,15 @@ main {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  /* margin-top: 100px;  */
+}
+
+.main_criacaoanuncio {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-input {
@@ -76,7 +85,7 @@ input::placeholder {
 .botao-mais {
   position: absolute;
   right: 7px;
-  top: 24%;
+  top: -55%;
   transform: translateY(-50%);
   width: 35px;
   height: 35px;
