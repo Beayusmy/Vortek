@@ -7,19 +7,16 @@
   font-weight: normal; 
 }
 
-/* body {
-  background-color: #d9d9d9;
+/* ==========================
+   ESTRUTURA PRINCIPAL
+========================== */
+.main_criacaoanuncio {
+  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-
-main {
-  width: 90%;
-  max-width: 700px;
-  margin-top: 36px;
-  text-align: left; 
-} */
 
 .main_criacaoanuncio h4 {
   color: #D44F00;
@@ -30,24 +27,27 @@ main {
   font-weight: normal;
 }
 
-/* Formulário */
+/* ==========================
+   FORMULÁRIO
+========================== */
 .form-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  /* margin-top: 100px;  */
 }
 
-.main_criacaoanuncio {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* ==========================
+   UPLOAD DE IMAGEM
+========================== */
 
+/* Esconde o input real */
 .img-input {
+  display: none;
+}
+
+/* Label estilizada como botão de upload */
+.label-arquivo {
   width: 100%;
   max-width: 620px;
   padding: 12px 14px;
@@ -57,8 +57,19 @@ main {
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.12);
   color: #D44F00;
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  transition: background-color 0.3s;
 }
 
+.label-arquivo:hover {
+  background-color: #f6f6f6;
+}
+
+/* ==========================
+   CAMPO + BOTÃO (TRANSAÇÃO)
+========================== */
 .input-botao {
   position: relative;
   width: 100%;
@@ -81,11 +92,11 @@ input::placeholder {
   opacity: 1;
 }
 
-/* Botão + */
+/* Botão "+" */
 .botao-mais {
   position: absolute;
   right: 7px;
-  top: -55%;
+  top: 38%;
   transform: translateY(-50%);
   width: 35px;
   height: 35px;
@@ -98,9 +109,16 @@ input::placeholder {
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   padding: 0;
+  transition: opacity 0.3s;
 }
 
-/* Pré-visualização */
+.botao-mais:hover {
+  opacity: 0.9;
+}
+
+/* ==========================
+   PRÉ-VISUALIZAÇÃO
+========================== */
 .pre-visualizacao {
   width: 100%;
   max-width: 620px;
@@ -121,7 +139,9 @@ input::placeholder {
   font-weight: normal;
 }
 
-/* Botões */
+/* ==========================
+   BOTÕES (CANCELAR / UPLOAD)
+========================== */
 .botao-up-cn {
   width: 100%;
   max-width: 620px;
@@ -148,17 +168,4 @@ button.upload {
 button.cancel:hover,
 button.upload:hover {
   opacity: 0.85;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-  .btn-container {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  button.cancel,
-  button.upload {
-    width: 100%;
-  }
 }

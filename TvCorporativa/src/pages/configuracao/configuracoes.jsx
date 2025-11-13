@@ -27,16 +27,18 @@ function CadastrarTv() {
         <label className="tv-label">Tempo de imagem</label>
         <input type="text" className="tv-input" />
 
-        <label className="tv-label">Cadastrar TV</label>
+        <label className="tv-label2">Cadastrar TV</label>
         <input type="text" className="tv-input" />
 
-        <button className="btn-cadastrar">CADASTRAR</button>
-
-        <label className="tv-label">Pesquisar TV</label>
+        <label className="tv-label3">Pesquisar TV</label>
         <div className="search-box">
           <input type="text" className="tv-input search-input" />
           <FaSearch className="search-icon" />
         </div>
+        <button className="btn-cadastrar">CADASTRAR</button>
+
+        
+       
       </div>
     </div>
     </>

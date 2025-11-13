@@ -13,37 +13,37 @@ function MenuPrincipal() {
 
       <div className="menu-content">
         <div className="menu-grid">
-          <Link to="/criacaoAnuncio" >
+          <Link className="link" to="/criacaoAnuncio" >
             <button>
               CRIAR ANUNCIO
             </button>
           </Link>
 
-          <Link to="/Mensagem" >
+          <Link className="link" to="/Mensagem" >
             <button>
               ANUNCIOS MENSAGEM
             </button>
           </Link>
 
-          <Link to="/uploadDeImagem" >
+          <Link className="link" to="/uploadDeImagem" >
             <button>
               CADASTRAR TV
             </button>
           </Link>
 
-          <Link to="/configuracao" >
+          <Link className="link" to="/configuracao" >
             <button>
               ANUNCIOS CRIADOS
             </button>
           </Link>
 
-          <Link to="/CursosPassando" >
+          <Link className="link" to="/CursosPassando" >
             <button>
               TVS CADASTRADAS
             </button>
           </Link>
 
-          <Link to="/Visualizador" >
+          <Link className="link" to="/Visualizador" >
             <button>
               VISUALIZAR TVS
             </button>

@@ -33,9 +33,10 @@ cu/* Fundo geral */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 220px);
-  grid-gap: 25px 60px;
+  grid-gap: 58px 60px;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 100px;
 }
 
 /* Botões principais */
@@ -43,13 +44,14 @@ cu/* Fundo geral */
   background-color: #d84e02;
   color: white;
   border: none;
-  padding: 15px 20px;
+  padding: 18px 20px;
   font-size: 15px;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 5px 0 #a13b00;
   transition: all 0.2s ease;
+  width: 118%;
 }
 
 .menu-grid button:hover {
@@ -66,7 +68,7 @@ cu/* Fundo geral */
   padding: 15px 100px;
   font-size: 15px;
   font-weight: bold;
-  /* border-radius: 8px; */
+  border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 5px 0 #a13b00;
   transition: all 0.2s ease;
@@ -76,4 +78,8 @@ cu/* Fundo geral */
   background-color: #f75a00;
   box-shadow: 0 3px 0 #8c2e00;
   transform: translateY(2px);
+}
+
+.link{
+  width: 100%;
 }

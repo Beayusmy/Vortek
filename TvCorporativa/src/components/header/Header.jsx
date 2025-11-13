@@ -12,7 +12,7 @@ const Header = () => {
       </div>
 
       <div className="icons-section">
-        <Link to={'/cadastro'}>
+        <Link to={'/Menu'}>
           <FaRegFileAlt className="icon" />
         </Link>
 
@@ -20,11 +20,11 @@ const Header = () => {
           <FaSignOutAlt className="icon" />
         </Link>
 
-        <Link to={'/Menu'}>
+        <Link to={'/criacaoAnuncio'}>
           <FaPlus className="icon" />
         </Link>
 
-        <Link to={'/CriacaoAnuncio'}>
+        <Link to={'/Visualizador'}>
           <FaEye className="icon" />
         </Link>
 
