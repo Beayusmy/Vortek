@@ -1,6 +1,7 @@
 import React from "react";
 import "./Mensagens.css";
 import Header from "../../components/header/Header";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function MensagemForm() {
   return (
@@ -23,13 +24,29 @@ export default function MensagemForm() {
         <label>DATA DE PARAR DE EXIBIR:</label>
         <input type="date" />
 
+
+
         <div className="buttons">
-          <button type="button" className="cancel">
+
+          <Link to="/Menu" >
+          
+          <button 
+          type="button" 
+          className="cancel"
+          onClick={() => navigate("/Menu")}
+          >
             CANCELAR
           </button>
-          <button type="submit" className="confirm">
+          </Link>
+
+
+          <Link>
+          <button type="submit" 
+          className="confirm">
             CONFIRMAR
           </button>
+          </Link>
+
         </div>
       </form>
     </div>

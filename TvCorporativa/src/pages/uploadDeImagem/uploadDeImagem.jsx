@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./uploadDeImagem.css";
 import Header from "../../components/header/Header";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function UploadDeImagem() {
     const [file, setFile] = useState(null);
@@ -57,7 +58,15 @@ export default function UploadDeImagem() {
                     </div>
                     <div className="campos_form_upload">
                         <button className="bota_upload_imagem">Salvar</button>
-                        <button className="bota_upload_imagem">Cancelar</button>
+
+                        <Link>
+                        <button 
+                        type="button"
+                        className="bota_upload_imagem"
+                        onClick={() => navigate("/Menu")}
+                        >Cancelar
+                        </button>
+                        </Link>
                     </div>
                 </form>
             </main>

@@ -32,14 +32,13 @@
 .image-section {
   position: relative;
   width: 100%;
-  height: 380px;
+  /* height: 380px;  --- REMOVIDO para permitir redução automática */
 }
 
 .main-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* mostra tudo sem cortar */
 }
 
 /* ==== TEXTO SOBREPOSTO ==== */
@@ -110,10 +109,9 @@
   font-weight: bold;
 }
 
-
 .campo_img {
-      width: 85%;
-    padding: 50px;
+  width: 60%;
+  padding: 20px;
 }
 
 .main_visualizador {

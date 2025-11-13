@@ -85,12 +85,13 @@ const CriacaoAnuncio = () => {
           <button
             type="button"
             className="cancel"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/Menu")}
           >
             CANCELAR
           </button>
           <button type="submit" className="upload">
             UPLOAD
+            
           </button>
         </div>
       </form>

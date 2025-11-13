@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import Header from "../../components/header/Header";
+import Logo from "../../assets/img/logo_grupo-removebg-preview 4.png"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -20,8 +21,8 @@ function Login() {
     <main className="main_login">
         <div className="login-container">
         <header className="login-header">
-            <h1 className="logo">
-            <span className="logo-v"></span>VORTEK
+            <h1 className="logo-login">
+            <img src={Logo} alt="Logo Vortek" className="logo-login" />
             </h1>
         </header>
 

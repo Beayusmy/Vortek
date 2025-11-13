@@ -12,8 +12,12 @@
 }
 
 .bota_upload_imagem{
-  background-color: #003878;
-  text-transform: uppercase;
+     background-color: #003878;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    width: 24%;
+    text-transform: uppercase;
 
 }
 

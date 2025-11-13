@@ -1,23 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c9c9c9;
+  font-family: Arial, sans-serif;
+}
+
+mn .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: none;
+}
+
+.logo_grupo {
+  width: 120px;
+}
+
 .cadastro-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #c9c9c9; /* fundo cinza claro */
+  height: 80vh;
 }
 
 .cadastro-box {
   background-color: #d9d9d9;
-  padding: 40px;
+  padding: 60px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
-}
-
-.logo {
-  width: 100px;
-  /* margin-bottom: 20px; */
 }
 
 label {
@@ -25,7 +38,7 @@ label {
   text-align: left;
   margin-top: 10px;
   margin-bottom: 5px;
-  color: #d94b2b; /* laranja */
+  color: #d94b2b;
   font-weight: 600;
 }
 
@@ -36,24 +49,38 @@ input {
   border: none;
   outline: none;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 14px;
 }
 
-button {
-  /* width: 100%; */
-  background-color: #003366; /* azul escuro */
+.btn_cadastro {
+  width: 100%;
+  background-color: #003366;
   color: white;
   border: none;
   border-radius: 6px;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 12px;
+  margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 50px;
 }
 
-button:hover {
+
+/* .nomedaclasse:hover */
+
+.btn_cadastro:hover {
   background-color: #002244;
+}
+
+
+.logo_cad_usuario{
+  width: 400px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
 }

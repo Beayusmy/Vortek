@@ -1,6 +1,7 @@
 import React from "react";
 import "./menu.css";
 import logo from "../../assets/img/logo_grupo.png"; // caminho da sua logo
+import { Link } from "react-router-dom";
 
 
 function MenuPrincipal() {
@@ -12,12 +13,41 @@ function MenuPrincipal() {
 
       <div className="menu-content">
         <div className="menu-grid">
-          <button>CRIAR ANUNCIO</button>
-          <button>ANUNCIOS MENSAGEM</button>
-          <button>CADASTRAR TV</button>
-          <button>ANUNCIOS CRIADOS</button>
-          <button>TVS CADASTRADAS</button>
-          <button>VISUALIZAR TVS</button>
+          <Link to="/criacaoAnuncio" >
+            <button>
+              CRIAR ANUNCIO
+            </button>
+          </Link>
+
+          <Link to="/Mensagem" >
+            <button>
+              ANUNCIOS MENSAGEM
+            </button>
+          </Link>
+
+          <Link to="/uploadDeImagem" >
+            <button>
+              CADASTRAR TV
+            </button>
+          </Link>
+
+          <Link to="/configuracao" >
+            <button>
+              ANUNCIOS CRIADOS
+            </button>
+          </Link>
+
+          <Link to="/CursosPassando" >
+            <button>
+              TVS CADASTRADAS
+            </button>
+          </Link>
+
+          <Link to="/Visualizador" >
+            <button>
+              VISUALIZAR TVS
+            </button>
+          </Link>
         </div>
 
         <button className="btn-sair">SAIR DA CONTA</button>

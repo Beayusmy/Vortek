@@ -20,15 +20,15 @@ body {
 
 .login-header {
   background: linear-gradient(90deg, #002f9e, #ff6a00);
-  padding: 12px 0;
+  /* padding: 20px 0; */
   text-align: center;
 }
 
-.logo {
+.logo-login {
   font-size: 26px;
   font-weight: bold;
   color: #ff6a00;
-      margin-left: 50px;
+      /* margin-left: 50px; */
 }
 
 .logo-v {
