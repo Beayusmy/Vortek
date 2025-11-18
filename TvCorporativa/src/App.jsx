@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      {/* <Cadastro/> */}
+       <Rotas />
       {/* <Login/> */}
       {/* <Menu/>  */}
       {/* <CriacaoAnuncio/> */}
@@ -25,7 +25,6 @@ function App() {
       {/* <CursosPassando/> */}
       {/* <EditarTvs/> */}
       {/* <Visualizador/> */}
-      <Rotas/>
     </>
   )
 }

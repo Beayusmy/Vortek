@@ -2,6 +2,7 @@ import React from "react";
 import "./menu.css";
 import logo from "../../assets/img/logo_grupo.png"; // caminho da sua logo
 import { Link } from "react-router-dom";
+import { LogIn } from "lucide-react";
 
 
 function MenuPrincipal() {
@@ -50,7 +51,9 @@ function MenuPrincipal() {
           </Link>
         </div>
 
+          <Link to="/Login">
         <button className="btn-sair">SAIR DA CONTA</button>
+          </Link>
       </div>
     </div>
   );

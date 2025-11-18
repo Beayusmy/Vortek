@@ -1,30 +1,103 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CriacaoAnuncio.css";
 import Header from "../../components/header/Header";
+import api from "../services/Services";
+import Swal from "sweetalert2";
 
 const CriacaoAnuncio = () => {
   const navigate = useNavigate();
   const { setUsuario } = ""; // temporário
 
   const [imagem, setImagem] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
   const [transacao, setTransacao] = useState("");
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
   const [preco, setPreco] = useState("");
   const [categoria, setCategoria] = useState("");
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({
-      imagem,
-      transacao,
-      titulo,
-      descricao,
-      preco,
-      categoria,
-    });
+    setLoading(true);
+
+    try {
+      // preparar payload (usaremos JSON com ImagemBase64 quando houver imagem)
+      console.log("Preparando envio (CriacaoAnuncio):", { titulo, descricao, preco, categoria, transacao, imagem });
+
+      let res;
+      if (imagem) {
+        // converte arquivo para base64
+        const fileToBase64 = (file) =>
+          new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+
+        const base64 = await fileToBase64(imagem);
+
+        const jsonPayload = {
+          Titulo: titulo,
+          Descricao: descricao,
+          CategoriaId: categoria || undefined,
+          Preco: preco || undefined,
+          Transacao: transacao || undefined,
+          ImagemBase64: base64,
+        };
+
+        console.log("Enviando JSON com ImagemBase64 (CriacaoAnuncio):", { Titulo: titulo, Descricao: descricao, CategoriaId: categoria, Preco: preco, Transacao: transacao });
+        res = await api.post("Conteudo", jsonPayload);
+      } else {
+        const jsonPayload = {
+          Titulo: titulo,
+          Descricao: descricao,
+          CategoriaId: categoria || undefined,
+          Preco: preco || undefined,
+          Transacao: transacao || undefined,
+        };
+
+        console.log("Enviando JSON (CriacaoAnuncio):", jsonPayload);
+        res = await api.post("Conteudo", jsonPayload);
+      }
+
+      console.log("Resposta do upload (Conteudo):", res);
+
+      // só considerar sucesso se status for 2xx
+      const status = res?.status ?? res?.data?.status ?? null;
+      if (status && status >= 200 && status < 300) {
+        const successText = imagem ? "Conteúdo enviado com imagem (base64)." : "Conteúdo enviado com sucesso.";
+        const details = res?.data ? JSON.stringify(res.data) : "";
+        await Swal.fire({
+          icon: "success",
+          title: "Enviado",
+          text: `${successText} ${details}`,
+          timer: 1500,
+          showConfirmButton: false,
+        });
+        navigate("/Menu");
+      } else {
+        throw new Error(`Unexpected response status: ${status}`);
+      }
+    } catch (err) {
+      console.error("Erro ao enviar Conteudo:", err, err.response);
+      const message = err.response?.data?.message || err.response?.data || err.message || "Erro ao enviar";
+      await Swal.fire({ icon: "error", title: "Erro", text: typeof message === "object" ? JSON.stringify(message) : String(message) });
+    } finally {
+      setLoading(false);
+    }
   };
+
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
 
   return (
     <>
@@ -40,7 +113,16 @@ const CriacaoAnuncio = () => {
             id="input-arquivo"
             className="img-input"
             accept="image/*"
-            onChange={(e) => setImagem(e.target.files[0])}
+            onChange={(e) => {
+              const file = e.target.files[0];
+              setImagem(file || null);
+              if (file) {
+                const url = URL.createObjectURL(file);
+                setPreviewUrl(url);
+              } else {
+                setPreviewUrl(null);
+              }
+            }}
           />
           <label htmlFor="input-arquivo" className="label-arquivo">
             {imagem ? imagem.name : "IMAGEM"}
@@ -82,8 +164,15 @@ const CriacaoAnuncio = () => {
 
           {/* Pré-visualização */}
           <div className="pre-visualizacao">
-            <p>pré-visualização</p>
+            {previewUrl ? (
+              <img src={previewUrl} alt="pré-visualização" className="preview-img" />
+            ) : (
+              <p>pré-visualização</p>
+            )}
           </div>
+
+          {/* liberar URL criada quando componente desmontar ou imagem mudar */}
+          
 
           {/* Botões */}
           <div className="botao-up-cn">
