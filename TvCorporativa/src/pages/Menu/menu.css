@@ -1,7 +1,7 @@
-cu/* Fundo geral */
+/* Fundo geral */
 .menu-container {
   background-color: #dcdcdc;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,10 +18,11 @@ cu/* Fundo geral */
 }
 
 .menu-logo {
-  height: 200px;
+  height: 160px;
+  margin-top: 10px;
 }
 
-/* Área central */
+Área central
 .menu-content {
   margin-top: 40px;
   display: flex;
@@ -29,57 +30,37 @@ cu/* Fundo geral */
   align-items: center;
 }
 
-/* Grade de botões */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 220px);
-  grid-gap: 58px 60px;
-  justify-content: center;
-  margin-bottom: 40px;
-  margin-top: 100px;
+/* Lista de botões */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  margin-top: 113px;
 }
 
-/* Botões principais */
-.menu-grid button {
+/* Botões */
+.menu-buttons button {
   background-color: #d84e02;
   color: white;
   border: none;
-  padding: 18px 20px;
-  font-size: 15px;
+  width: 320px;
+  height: 55px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 5px 0 #a13b00;
+  box-shadow: 0 6px 0 #a13b00;
   transition: all 0.2s ease;
-  width: 118%;
 }
 
-.menu-grid button:hover {
+.menu-buttons button:hover {
   background-color: #f75a00;
-  box-shadow: 0 3px 0 #8c2e00;
+  box-shadow: 0 4px 0 #8c2e00;
   transform: translateY(2px);
 }
 
-/* Botão "Sair da Conta" */
+/* Botão sair */
 .btn-sair {
   background-color: #d84e02;
-  color: white;
-  border: none;
-  padding: 15px 100px;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 5px 0 #a13b00;
-  transition: all 0.2s ease;
-}
-
-.btn-sair:hover {
-  background-color: #f75a00;
-  box-shadow: 0 3px 0 #8c2e00;
-  transform: translateY(2px);
-}
-
-.link{
-  width: 100%;
 }
